@@ -1,0 +1,87 @@
+---
+import icon from '../assets/ctp.png';
+import NavCTP from '../components/NavCTP.astro';
+const {title} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="AL haZera25, ALZ, al hazera25, Crafting Table Plus, crafting table plus, Crafting table plus.">
+	<meta name="description" content="This is page for crafting table plus mods.">
+	<meta name="author" content="AL haZera25, alhazera25, al hazera25, Albania hazera, albania hazera">
+	<link rel="icon" type="image/png" href={icon.src}>
+	<title>Crafting Table Plus | {title}</title>	
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container">
+				<div class="backnav">
+					<img src={icon.src} alt="Icon Crafting Table Plus" width="70" height="70">
+					<h1 class="navtitle">Crafting Table Plus</h1>
+					<NavCTP/>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<slot/>
+	</main>
+	<footer>
+		<div class="confoot">
+			<p class="copy">&copy; AL haZera25</p>
+		</div>
+	</footer>
+</body>
+</html>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background-color: black;
+		color: white;
+	}
+	
+	.container {
+		background-color: aqua;
+		color: black;
+		display: flex;
+		align-items: center;
+	}
+	
+	.backnav {
+		align-items: center;
+		display: flex;
+	}
+
+	.navtitle {
+		font-size: large;
+	}
+
+	main {
+		min-height: 100vh;
+
+	}
+
+	.confoot {
+		margin-top: 8px;
+		background-color: aqua;
+		color: black;
+	}
+	
+	.copy {
+		display: center;
+		text-align: center;
+		font-size: large;
+		font-family: 'Times New Roman', Times, serif;
+		padding: 6px;
+	}
+
+</style>

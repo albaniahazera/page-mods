@@ -1,0 +1,97 @@
+---
+const currentPath = Astro.url.pathname
+---
+
+
+<div class="container-tion">
+	<div class="container-doc-des">
+		<h4 class="doc-des" class:list={{ active: currentPath === '/' }}>
+			<a href="/" class="link">
+				Home
+			</a>
+		</h4>
+	</div>
+	<div class="container-doc-des">
+		<h4 class="doc-des" class:list={{ active: currentPath === '/documentation' }}>
+			<a href="/documentation" class="link">
+				Documentation
+			</a>
+		</h4>
+	</div>
+	<div class="container-doc-des">
+		<h4 class="doc-des" class:list={{ active: currentPath === '/description' }}>
+			<a href="/description" class="link">
+				Description
+			</a>
+		</h4>
+	</div>
+</div>
+
+
+<style>
+	.container-tion {
+        align-items: center;
+        display: flex;
+        position: absolute;
+        right: 0;
+    }
+    
+    .container-doc-des {
+        margin-left: 4px;
+		margin-right: 4px;
+    }
+	
+    
+    .doc-des {
+		padding: 2px;
+		justify-content: center;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+    }
+    
+    .link {
+		text-decoration: none;
+		color: white;
+    }
+	
+	.link:hover {
+		color: cyan;
+	}
+
+	.active {
+		border: 1px solid cyan;
+		color: black;
+	}
+
+	@media (max-width: 600px) {
+		.container-tion {
+			align-items: center;
+			display: flex;
+			position: absolute;
+			right: 0;
+			margin: 1px;
+		}
+		
+		.doc-des {
+			border-radius: 3px;
+			padding: 1px;
+			justify-content: center;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+		}
+
+		.link {
+			text-decoration: none;
+        	color: white;
+			font-size: x-small;
+			padding: 0.5px;
+    	}
+		
+		.active {
+			color: black;
+			border: 1px solid cyan;
+		}
+	}
+</style>

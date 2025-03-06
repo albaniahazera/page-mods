@@ -1,0 +1,104 @@
+---
+import IndexLayout from "../layouts/Index Layout.astro";
+import Line from "../components/Line.astro";
+import ImgAstro from "../assets/astro.svg";
+import ImgExpress from "../assets/express.png";
+const title = "Description";
+---
+
+<IndexLayout title={title}>
+    <div>
+        <h1>Description</h1>
+        <Line/>
+        <div class="title-content">
+            <h2>
+                Purpose of this page created
+                <Line/>
+            </h2>
+        </div>
+        <div class="container-2">
+            <p>
+                This page was created to display various Minecraft mods that we have made for our mod users.
+            </p>
+            <p>
+                This page also serves as a learning tool in web development by Albania Hazera, mastering how to create a complete website like a fullstack developer, and may add many new features in the future.
+            </p>
+            <p>
+                Makes it easier for users to know what is inside a mod.
+            </p>
+            <p>
+                To inform the user about what has been added in the latest version of a mod.
+            </p>
+        </div>
+        <div class="title-content">
+            <h2>
+                What is this page made of
+                <Line/>
+            </h2>
+        </div>
+        <div class="container-2">
+            <h3>Frontend</h3>
+            <img src={ImgAstro.src} alt="Astro Icon" class="astro">
+            <p class="work">using the Astrojs framework.</p>
+            <h3>Backend</h3>
+            <div class="img-express">
+                <img src={ImgExpress.src} alt="Express Icon" class="express">
+                <p><a target="_blank" href="https://icons8.com/icon/kg46nzoJrmTR/express-js" class="icon8">Express Js</a> icon by <a target="_blank" href="https://icons8.com" class="icon8">Icons8</a></p>
+            </div>
+            <p class="work">using the Expressjs framework.</p>
+        </div>
+    </div>
+</IndexLayout>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+
+    h2 {
+        margin: 10px 0px;
+        font-size: larger;
+    }
+
+    h3 {
+        font-size: larger;
+    }
+
+    .title-content {
+        margin: 2px 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 270px;
+    }
+    
+    .container-2 {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 5px 8px;
+    }
+
+    p {
+        margin: 1px;
+    }
+
+    .work {
+        margin: 2px 8px;
+    }
+
+    .astro {
+        margin: 0px 8px;
+    }
+
+    .img-express {
+        margin: 0px 8px;
+        justify-content: left;
+    }
+    
+    .icon8 {
+        text-decoration: none;
+    }
+</style>

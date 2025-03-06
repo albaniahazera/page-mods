@@ -1,0 +1,85 @@
+---
+import navimage from '../assets/photo_profil.jpg';
+import Docdes from '../components/Docdes.astro';
+const {title} = Astro.props;
+---
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="AL haZera25, ALZ, al hazera25, All Mods By AL haZera25, Crafting Table Plus, crafting table plus, Crafting table plus.">
+    <meta name="description" content="This is page for all mods by al hazera25. Crafting Table Plus and etc.">
+    <meta name="author" content="AL haZera25, alhazera25, al hazera25, Albania hazera, albania hazera">
+    <link rel="icon" type="image/jpg" href={navimage.src}>
+	<title>All Mods By ALZ | {title}</title>
+</head>
+<body>
+    <header>
+        <div class="container-navbar">
+            <nav class="container-navbar-image">
+                <div>
+                    <img src={navimage.src} alt="foto profil" width="70" height="70">
+                </div>
+                <h4>AL haZera25</h4>
+            </nav>
+            <Docdes/>   
+        </div>
+    </header>
+    <main>
+        <slot/>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <h4>&copy; AL haZera25. All right reserved.</h4>
+        </div>
+    </footer>
+</body>
+</html>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+
+    main {
+        height: 100vh;
+        background-color: #0e0d0dda;
+        color: white;
+    }
+
+    footer {
+        background-color: black;
+        padding: 10px;
+    }
+
+    .container-navbar {
+        background-color: black;
+        color: red;
+        align-items: center;
+        display: flex;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: large;
+    }
+
+    .container-navbar-image {
+        align-items: center;
+        display: flex;
+    }
+
+    .container-footer {
+        color: white;
+        text-align: center;
+    }
+
+    @media (max-width: 1000px) {
+        main {
+            height: 100vh;
+        }
+    }
+</style>

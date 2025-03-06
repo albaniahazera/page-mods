@@ -1,0 +1,96 @@
+---
+import IndexLayout from "../layouts/Index Layout.astro";
+import Line from "../components/Line.astro"
+const title = "Documentation"
+---
+
+<IndexLayout title={title} class:list="continer">
+    <div>
+        <h1>Documentation</h1>
+        <Line/>
+        <div class="title-content">
+            <h2>
+                Access mod page
+                <Line/>
+            </h2>
+        </div>
+        <div class="container-2">
+            <p>When the first page opens, 
+                You can click the button at the bottom center of the content, 
+                to access the mod page.
+            </p>
+        </div>
+        <div class="title-content">
+            <h2>
+                Comment feature
+                <Line/>
+            </h2>
+        </div>
+        <div class="container-2">
+            <p>
+                You can write comments on the mod page By ALZ.
+            </p>
+            <p>
+                You just need to enter the name and content of the comment you want to write.
+            </p>
+            <p>
+                It does not require login or anything like that, which requires personal data.
+            </p>
+            <p>
+                It is important to remember that if you write too many comments related to spam, your comments will be deleted.
+            </p>
+            <p>
+                Perhaps in future updates we will add a login feature to monitor comment sessions.
+            </p>
+        </div>
+        <div class="title-content">
+            <h2>
+                Download mod
+                <Line/>
+            </h2>
+        </div>
+        <div class="container-2">
+            <p>
+                You can download the mod by clicking the button on the mod page.
+            </p>
+            <p>
+                This will visit the web that supports our mod, you can download it there.
+            </p>
+            <p>
+                And don't forget to check which versions of Minecraft are supported by the mod.
+            </p>
+        </div>
+    </div>
+</IndexLayout>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+
+    h2 {
+        margin: 10px 0px;
+        font-size: larger;
+    }
+
+    .title-content {
+        margin: 2px 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 200px;
+    }
+    
+    .container-2 {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 5px 8px;
+    }
+
+    p {
+        margin: 1px;
+    }
+</style>

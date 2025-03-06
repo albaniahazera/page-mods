@@ -1,0 +1,366 @@
+---
+import CTPLayout from "./layouts/CTP Layout.astro";
+import modrinth from "./assets/modrinth.png";
+import Line from "./components/Line.astro";
+import curseforge from "./assets/curseforge.png";
+const title = 'Main';
+
+// if (Astro.request.method === "POST") {
+//     const formData = await Astro.request.formData();
+//     const user_name = formData.get("user_name");
+//     const user_comment = formData.get("user_comment");
+//     const data = {user_name, user_comment};
+
+//     const response = await fetch("http://localhost:4320/", {
+//         method: "POST",
+//         body: JSON.stringify(data),
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//     });
+// }
+// const response = await fetch("http://localhost:4320/api/reaction/datas/data");
+// const reactions = await response.json();
+---
+
+
+<CTPLayout title={title}>
+    <div class="container">
+        <div class="title">
+            <h1>Main</h1>
+        </div>
+    </div>
+    <div class="container-h2">
+        <h2>
+            What's Crafting Table Plus ?
+        </h2>
+    </div>
+    <div class="container-teks">
+        <p>
+            Crafting Table Plus is a mod for Minecraft java edition.
+        </p>
+        <p>
+            This mod help you to create some items that cannot be crafted on the crafting table at Minecraft vanila.
+        </p>
+        <p>
+            We created this mod to simplify gameplay in Minecraft, even though not everyone likes it, because this mod makes it easier for players to obtain rare items and superpowers, which may not be very challenging.   
+        </p>
+    </div>
+    <div class="container-h2">
+        <h2>
+            How is Crafting Table Plus created ?
+        </h2>
+    </div>
+    <div class="container-teks">
+        <p>
+            Crafting Table Plus is made just by adding a new file of JSON type.
+        </p>
+        <p>
+            This is certainly very easy, because it does not add new items and blocks, it only fills the JSON file with a specific script.
+        </p>
+    </div>  
+    <div class="container-h2">
+        <h2>
+            How often does Crafting Table Plus update version ?
+        </h2>
+    </div>
+    <div class="container-teks">
+        <p>
+            For version updates, every two weeks or once a month.
+        </p>
+        <p>
+            Regarding the mod version update, it is actually not always in line with what was mentioned above, because if we have a new project, the update may be delayed.   
+        </p>
+    </div>  
+    <div class="container-h2">
+        <h2>
+            Changelog
+        </h2>
+    </div>
+    <div class="container-teks">
+        <div class="version">
+            <h3>Version: 1.2.1</h3>
+        </div>
+        <h4>
+            Can crafting :
+        </h4>
+        <div class="changelog">
+            <ul>
+                <li>Blaze spawn egg</li>
+                <li>Cave spider spawn egg</li>
+                <li>Ghast spawn egg</li>
+                <li>Magma spawn egg</li>
+                <li>Phantom spawn egg</li>
+                <li>Wither spawn egg</li>
+                <li>Enchanted book fortune I-III</li>
+                <li>Enchanted book efficiency I-V</li>
+            </ul>
+        </div>
+    </div>  
+    <div class="container-teks">
+        <div class="version">
+            <h3>Version: 1.2</h3>
+        </div>
+        <h4>
+            Can crafting :
+        </h4>
+        <div class="changelog">
+            <ul>
+                <li>bell</li>
+                <li>bone</li>
+                <li>clay</li>
+                <li>cobweb</li>
+                <li>creeper spawn egg</li>
+                <li>diamond horse armor</li>
+                <li>elytra</li>
+                <li>enchanted golden apple</li>
+                <li>end rod</li>
+                <li>gilded black stone</li>
+                <li>gold horse armor</li>
+                <li>green dye</li>
+                <li>gunpowder</li>
+                <li>honey bottle</li>
+                <li>iron horse armor</li>
+                <li>name tag</li>
+                <li>saddle</li>
+                <li>skeleton spawn egg</li>
+                <li>soul sand</li>
+                <li>spawner</li>
+                <li>spider spawn egg</li>
+                <li>sponge</li>
+                <li>totem of undying</li>
+                <li>trident</li>
+                <li>zombie spawn egg</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-h2">
+        <h2>Download Crafting Table Plus mod</h2>
+    </div>
+    <div class="container-teks">
+        <div class="container-downloads">
+            <div class="container-download">
+                <p>Download at Modrinth</p>
+                <div class="download-button">
+                    <img src={modrinth.src} alt="Modrinth icon" class="icon-modrinth">
+                    <a href="https://modrinth.com/mod/crafting-table-plus" 
+                    class="url-modrinth" target="_blank">
+                        <button class="modrinth">Modrinth</button>
+                    </a>
+                </div>
+            </div>
+            <div class="container-download">
+                <p class="teks-download">Download at Curse Forge</p>
+                <div class="download-button">
+                    <img src={curseforge.src} alt="Curse Forge Icon" class="icon-curseforge">
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/crafting-table-plus" 
+                    class="url-curse" target="_blank">
+                        <button class="curse">Curse Forge</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container-h2">
+        <h2>Create A Comment</h2>
+    </div>
+    <div class="container-teks">
+        <div class="container-form">
+        <form method="POST" action="/mods/crafting%20table%20plus">
+            <input type="text" placeholder="enter a name..." class="name" name="user_name" required>
+            <textarea placeholder="type a comment..." class="comment" name="user_comment" required></textarea>
+            <button type="submit" class="post">post</button>
+        </form>
+        </div>
+    </div>
+    <div class="container-h2">
+        <h2>All Comments</h2>
+    </div>
+    <div class="container-teks">
+        {reactions?.getReactions?.data.map((reaction: {user_name: unknown; user_comment: unknown; }) => {
+            return (
+            <div class="container-1">
+                <h4 class="user_name">{reaction.user_name}</h4>
+                <p class="user_comment">{reaction.user_comment}</p>
+                <Line/>
+            </div>     
+            )
+        })}
+    </div> -->
+</CTPLayout>
+
+<style>
+
+    /* .comment {
+        padding: 4px;
+        height: 100px;
+    } */
+
+    /* .container-form {
+        justify-content: left;
+        align-items: normal;
+        display: flex;
+    } */
+
+    /* form {
+        display: flex;
+        flex-direction: column;
+        padding: 2px;
+    }
+
+    .post {
+        font-size: medium;
+        cursor: pointer;
+    } */
+
+    * {
+        margin: 0;
+        padding: 0;
+    }    
+    
+    body {
+        background-color: #666;
+        color: black;
+    }
+
+    .container {
+        background-color: black;
+        color: aqua;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: x-large;
+        padding: 2px;
+    }
+
+    .container-h2 {
+        margin-top: 8px;
+        margin-left: 6px;
+        background-color: black;
+        border: 1px solid rgb(0, 255, 55);
+        width: 250px;
+    }
+
+    h2 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: larger;
+        text-align: center;
+        color: white;
+    }
+    
+    .container-teks {
+        margin: 0px 6px;
+        border: 1px solid aqua;
+    }
+
+    .container-downloads {
+        display: flex;
+    }
+    
+    .container-download {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin: 2px 6px;
+    }
+    
+    .version {
+        background-color: black;
+        color: aqua;
+        border: 1px solid rgb(0, 255, 55);
+        width: 112px;
+    }
+
+    h3 {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+    
+
+    h4 {
+        margin: 0px 6px;
+    }
+
+    p {
+        text-align: justify;
+        margin: 4px 6px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .changelog {
+        margin: 0px 30px;
+    }
+
+    a {
+        margin: 0px 6px;
+    }
+
+    .modrinth, .curse {
+        margin: 4px 0px;
+        background-color: #0e0d0dda;
+        color: white;
+    }
+
+    .icon-modrinth {
+        width: 70px;
+        height: 70px;
+        margin: 0px 6px;
+    }
+
+    .icon-curseforge {
+        width: 115px;
+        height: 70px;
+        margin: 0px 6px;
+    }
+
+    .modrinth:hover {
+        cursor: pointer;
+        background-color: green;
+    }
+
+    .curse:hover {
+        cursor: pointer;
+        background-color: rgb(204, 53, 7);
+    }
+
+    .url-modrinth, .url-curse {
+        display: flex;
+        justify-content: center;
+    }   
+
+    .teks-download {
+        text-align: justify;
+    }
+
+    .download-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    @media (max-width: 790px) {
+        .container-downloads {
+            flex-direction: column;
+            justify-content: right;
+        }
+        
+        .container-download {
+            justify-content: right;
+        }
+
+        .download-button {
+            justify-content: left;
+            align-items: normal;
+        }
+
+        .url-curse, .url-modrinth {
+            justify-content: left;
+            align-items: normal;
+        }
+    }
+</style> 
