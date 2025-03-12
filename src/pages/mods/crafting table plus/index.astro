@@ -78,6 +78,26 @@ const title = 'Main';
         </h2>
     </div>
     <div class="container-teks">
+        <div class="version-new">
+            <h3>Version: 1.3.0</h3>
+        </div>
+        <h4>
+            Can crafting :
+        </h4>
+        <div class="changelog">
+            <ul>
+                <li>Chainmail boots</li>
+                <li>Chainmail leggings</li>
+                <li>Chainmail chestplate</li>
+                <li>Chainmail helmet</li>
+                <li>Enchanted book mending</li>
+                <li>Enchanted book silk touch</li>
+                <li>Enchanted book unbreaking I-III</li>
+                <li>Wither rose</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-teks">
         <div class="version">
             <h3>Version: 1.2.1</h3>
         </div>
@@ -140,7 +160,7 @@ const title = 'Main';
     <div class="container-teks">
         <div class="container-downloads">
             <div class="container-download">
-                <p>Download at Modrinth</p>
+                <p class="teks-download">Download at Modrinth</p>
                 <div class="download-button">
                     <img src={modrinth.src} alt="Modrinth icon" class="icon-modrinth">
                     <a href="https://modrinth.com/mod/crafting-table-plus" 
@@ -269,9 +289,16 @@ const title = 'Main';
         margin: 2px 6px;
     }
     
-    .version {
+    .version-new {
         background-color: black;
         color: aqua;
+        border: 1px solid rgb(0, 255, 55);
+        width: 112px;
+    }
+
+    .version {
+        background-color: black;
+        color: white;
         border: 1px solid rgb(0, 255, 55);
         width: 112px;
     }
@@ -346,21 +373,24 @@ const title = 'Main';
     @media (max-width: 790px) {
         .container-downloads {
             flex-direction: column;
-            justify-content: right;
+            display: flex;
+            justify-content: center;
         }
         
         .container-download {
-            justify-content: right;
+            justify-content: center;
+        }
+        
+        .teks-download {
+            text-align: center;
         }
 
         .download-button {
-            justify-content: left;
-            align-items: normal;
+            justify-content: center;
         }
 
         .url-curse, .url-modrinth {
-            justify-content: left;
-            align-items: normal;
+            justify-content: center;
         }
     }
 </style> 
