@@ -1,0 +1,375 @@
+---
+import MOLayout from "./layouts/Mo Layout.astro";
+import Amethyst_ore from "./assets/amethyst_ore.png";
+import Shadowite_ore from "./assets/shadowite_ore.png";
+import Amethyst from "./assets/amethyst.png";
+import Shadowite from "./assets/shadowite.png";
+import Amethyst_block from "./assets/amethyst_block.png";
+import Mystic_glowstone from "./assets/mystic_glowstone.png";
+import Mystic_glowstone_ai from "./assets/mystic_glowstone_armor_item.png";
+import Shadowite_axe from "./assets/shadowite_axe.png";
+import Shadowite_hoe from "./assets/shadowite_hoe.png";
+import Shadowite_pickaxe from "./assets/shadowite_pickaxe.png";
+import Shadowite_shovel from "./assets/shadowite_shovel.png";
+import Shadowite_sword from "./assets/shadowite_sword.png";
+import SA_in_hand from "./assets/sa_in_hand.png";
+import SH_in_hand from "./assets/sh_in_hand.png";
+import SP_in_hand from "./assets/sp_in_hand.png";
+import SS_in_hand from "./assets/ss_in_hand.png";
+import SV_in_hand from "./assets/sv_in_hand.png";
+const title = 'Gallery';
+const Images = [
+    {
+        id: 0,
+        image: Amethyst_ore.src,
+        alt: "Amethyst Ore",
+        width: 420,
+        height: 240,
+        title: "Amethyst Ore",
+        description_0: "You can find this ore in Y 50 and Y 10.",
+		description_1: "This ore can be made into armor and block, you can see it in the recipe.",
+		description_2: "This ore can produce amethyst, obtained by destroying it."
+        
+    },
+    {
+        id: 1,
+        image: Shadowite_ore.src,
+        alt: "Shadowite Ore",
+        width: 420,
+        height: 240,
+        title: "Shadowite Ore",
+        description_0: "You can find this ore in Y 10 and Y 4.", 
+        description_1: "This ore can be made into armor, you can see it in the recipe.", 
+        description_2: "This ore can produce shadowite, obtained by burning it in furnaces and blast furnaces." 
+    },
+    {
+        id: 2,
+        image: Amethyst.src,
+        alt: "Amethyst",
+        width: 420,
+        height: 240,
+        title: "Amethyst",
+        description_0: "This item is useful for making armor, blocks, and new items.", 
+        description_1: "You can see it in the recipe.", 
+        description_2: "Obtained from amethyst ore." 
+    },
+    {
+        id: 3,
+        image: Shadowite.src,
+        alt: "Shadowite",
+        width: 420,
+        height: 240,
+        title: "Shadowite",
+        description_0: "This item is useful for making armor, tools, and new items.", 
+        description_1: "You can see it in the recipe.", 
+        description_2: "Obtained from shadowite ore." 
+    },
+    {
+        id: 4,
+        image: Amethyst_block.src,
+        alt: "Amethyst Block",
+        width: 420,
+        height: 240,
+        title: "Amethyst Block",
+        description_0: "This block is useful for building.", 
+        description_1: "It can be made from amethyst.", 
+        description_2: "You can see it in the recipe." 
+    },
+    {
+        id: 5,
+        image: Mystic_glowstone.src,
+        alt: "Mystic Glowstone",
+        width: 420,
+        height: 240,
+        title: "Mystic Glowstone",
+        description_0: "This item is useful for crafting stronger armor.", 
+        description_1: "It can be made from amethyst.", 
+        description_2: "You can see it in the recipe." 
+    },
+    {
+        id: 6,
+        image: Mystic_glowstone_ai.src,
+        alt: "Mystic Glowstone Armor Item",
+        width: 420,
+        height: 240,
+        title: "Mystic Glowstone Armor Item",
+        description_0: "A set of mystic glowstone armor placed on the armor stand.", 
+        description_1: "This set of armor was made with mystic glowstone items.", 
+        description_2: "You can see it in the recipe." 
+    },
+    {
+        id: 7,
+        image: Shadowite_axe.src,
+        alt: "Shadowite Axe",
+        width: 420,
+        height: 240,
+        title: "Shadowite Axe",
+        description_0: "A axe made of mystic glowstone items.", 
+        description_1: "You can make it at the crafting table, just like making a axe in general.", 
+        description_2: "You can see it in the recipe.",
+		when_in_hand: "When in main hand",
+		attack: "11 Attack Damage",
+		speed: "1 Attack Speed"
+    },
+    {
+        id: 8,
+        image: Shadowite_hoe.src,
+        alt: "Shadowite Hoe",
+        width: 420,
+        height: 240,
+        title: "Shadowite Hoe",
+        description_0: "A hoe made of mystic glowstone items.", 
+        description_1: "You can make it at the crafting table, just like making a hoe in general.", 
+        description_2: "You can see it in the recipe.",
+		when_in_hand: "When in main hand",
+		attack: "3 Attack Damage",
+		speed: "2 Attack Speed"
+    },
+    {
+        id: 9,
+        image: Shadowite_pickaxe.src,
+        alt: "Shadowite Pickaxe",
+        width: 420,
+        height: 240,
+        title: "Shadowite Pickaxe",
+        description_0: "A pickaxe made of mystic glowstone items.", 
+        description_1: "You can make it at the crafting table, just like making a pickaxe in general.", 
+        description_2: "You can see it in the recipe.",
+		when_in_hand: "When in main hand",
+		attack: "6 Attack Damage",
+		speed: "2 Attack Speed" 
+    },
+    {
+        id: 10,
+        image: Shadowite_shovel.src,
+        alt: "Shadowite Shovel",
+        width: 420,
+        height: 240,
+        title: "Shadowite Shovel",
+        description_0: "A shovel made of mystic glowstone items.", 
+        description_1: "You can make it at the crafting table, just like making a shovel in general.", 
+        description_2: "You can see it in the recipe.",
+		when_in_hand: "When in main hand",
+		attack: "3.5 Attack Damage",
+		speed: "2 Attack Speed" 
+    },
+    {
+        id: 11,
+        image: Shadowite_sword.src,
+        alt: "Shadowite Sword",
+        width: 420,
+        height: 240,
+        title: "Shadowite Sword",
+        description_0: "A sword made of mystic glowstone items.", 
+        description_1: "You can make it at the crafting table, just like making a sword in general.", 
+        description_2: "You can see it in the recipe.",
+		when_in_hand: "When in main hand",
+		attack: "10 Attack Damage",
+		speed: "2 Attack Speed" 
+    }
+]
+---
+
+<MOLayout title={title}>
+    <div class="container-gallery">
+        <div class="title-gallery">
+            <h1>Gallery</h1>
+        </div>
+    </div>
+    <div class="main-container">
+        {Images.map(map => (
+            <div class="container-1" data-image-id={map.id}>
+                <div class="container-img">
+                    <img src={map.image} alt={map.alt} width={map.width} height={map.height} class="img" />
+                </div>
+                <div class="title">
+                    <h2>{map.title}</h2>
+                </div>
+                <div class="description">
+                    <p>{map.description_0}
+						<br/>
+						{map.description_1}
+						<br/>
+						{map.description_2}
+						<br/>
+						<i>
+							{map.when_in_hand}
+							<br/>
+							{map.attack}
+							<br/>
+							{map.speed}
+						</i>
+					</p>
+                </div>
+                <div class="container-button">
+                    <a href={map.image}>
+                        <button>View full image</button>
+                    </a>
+                </div>
+            </div>
+        ))}
+	</div>
+</MOLayout>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container-gallery {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+    
+    .title-gallery {
+        text-align: center;
+    }
+    
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: x-large;
+        padding: 2px;
+    }
+
+    .main-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 10px 0px;
+	}
+	
+	.container-1 {
+		background-color: gray;
+		display: flex;
+		flex-direction: column;
+		margin: 6px;
+		padding: 3px;
+		width: 429px;
+	}
+
+	.title h2 {
+		text-align: center;
+        word-break: break-word;
+        color: black;
+	}
+
+    .title {
+        width: 429px;
+		display: flex;
+		justify-content: center;
+    }
+
+	.container-img {
+		margin: 4px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.img {
+		background-color: #0e0d0dda;
+	}
+
+	h2 {
+		font-size: large;
+	}
+
+	.description p {
+		word-break: break-word;
+		margin: 4px;
+		color: black;
+	}
+	
+	i {
+		font-style: normal;
+		word-break: break-word;
+		color: green;
+	}
+	
+	.description {
+		align-items: center;
+		width: 419px;
+		margin: 0px 6px;
+		background-color: white;
+	}
+	
+	.in-hand {
+		color: green;
+	}
+
+	.container-button {
+		display: flex;
+		justify-content: center;
+	}
+
+	button {
+		cursor: pointer;
+		background-color: #0e0d0dda;
+		color: white;
+        padding: 2px;
+	}
+
+    @media (max-width: 790px) {
+		.main-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+        .container-1 {
+		    background-color: gray;
+		    display: flex;
+		    flex-direction: column;
+		    margin: 6px;
+		    padding: 3px;
+		    width: 140px;
+	    }
+
+	    .title h2 {
+		    text-align: center;
+            word-break: break-word;
+	    }
+
+        .title {
+            width: 140px;
+        }
+
+	    .container-img {
+		    margin: 4px;
+		    display: flex;
+		    justify-content: center;
+	    }
+
+	    .img {
+		    background-color: #0e0d0dda;
+            width: 140px;
+            height: 70px;
+	    }
+
+	    h1 {
+		    font-size: large;
+	    }
+
+	    .description p {
+		    word-break: break-word;
+	    }
+	
+	    .description {
+		    align-items: center;
+		    display: flex;
+		    justify-content: center;
+		    width: 130px;
+    	}
+	
+	    .container-button {
+		    display: flex;
+		    justify-content: center;
+	    }
+
+	    button {
+		    cursor: pointer;
+		    background-color: #0e0d0dda;
+		    color: white;
+	    }
+    }
+</style>

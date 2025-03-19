@@ -1,15 +1,23 @@
 ---
 import IndexLayout from "../layouts/Index Layout.astro";
-import Image from "../assets/ctp.png";
+import Image_ctp from "../assets/ctp.png";
+import Image_mo from "../assets/misty_ore.jpg";
 const title = "Main";
 const mods = [
   {
     id: "mod-ctp-001",
     title: "Crafting Table Plus",
-    image: Image.src,
+    image: Image_ctp.src,
     description: "This mod will help you to create some items that cannot be crafted on the crafting table.",
-    url: "/mods/crafting table plus"
-  } 
+    url: "/mods/crafting-table-plus"
+  },
+  {
+	id: "mod-misty-ore-002",
+	title: "Misty Ore",
+	image: Image_mo.src,
+	description: "Misty Ore, This mod adds several new ores for a new experience in the game. Some ores can be used to craft tools and armor.",
+	url: "/mods/misty-ore"
+  }
 ];
 ---
 
@@ -56,6 +64,7 @@ const mods = [
 
 	.title {
 		text-align: center;
+		word-break: break-word;
 	}
 
 	.container-img {
@@ -87,7 +96,7 @@ const mods = [
 		display: flex;
 		justify-content: center;
 	}
-
+	
 	button {
 		cursor: pointer;
 		background-color: #0e0d0dda;
@@ -95,4 +104,37 @@ const mods = [
 		padding: 2px;
 	}
 	
+	@media (max-width: 768px) {
+
+		.main-container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.container-1 {
+			background-color: gray;
+			display: flex;
+			flex-direction: column;
+			margin: 6px;
+			padding: 3px;
+			width: 162px;
+		}
+
+		.title {
+			text-align: center;
+			word-break: break-word;
+		}
+		
+		.description p {
+			word-break: break-word;
+		}
+
+		.description {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			width: 162px;
+		}
+	}
+
 </style>

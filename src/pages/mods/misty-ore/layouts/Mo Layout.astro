@@ -1,0 +1,88 @@
+---
+import icon from '../assets/misty_ore.jpg';
+import NavMO from '../components/NavMO.astro';
+const {title} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="AL haZera25, ALZ, al hazera25, Misty Ore, misty ore, Misty ore.">
+	<meta name="description" content="A page to provide all the information about the Misty ore mod.">
+	<meta name="author" content="AL haZera25, alhazera25, al hazera25, Albania hazera, albania hazera">
+	<link rel="icon" type="image/jpg" href={icon.src}>
+	<title>Misty ore | {title}</title>	
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container">
+				<div class="backnav">
+					<img src={icon.src} alt="Icon Misty Ore" width="70" height="70">
+					<h1 class="navtitle">Misty ore</h1>
+					<NavMO/>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<slot/>
+	</main>
+	<footer>
+		<div class="confoot">
+			<p class="copy">&copy; AL haZera25</p>
+		</div>
+	</footer>
+</body>
+</html>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background-color: black;
+		color: white;
+	}
+	
+	.container {
+		background-color: rgb(68, 67, 71);
+		color: black;
+		display: flex;
+		align-items: center;
+	}
+	
+	.backnav {
+		align-items: center;
+		display: flex;
+	}
+
+	.navtitle {
+		font-size: large;
+        margin-left: 6px;
+        color: white;
+	}
+
+	main {
+		min-height: 100vh;
+
+	}
+
+	.confoot {
+		margin-top: 8px;
+		background-color: rgb(68, 67, 71);
+	}
+	
+	.copy {
+		display: center;
+		text-align: center;
+		font-size: large;
+		font-family: 'Times New Roman', Times, serif;
+		padding: 6px;
+	}
+
+</style>
