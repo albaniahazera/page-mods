@@ -66,11 +66,14 @@ const currentPath = Astro.url.pathname
 
 	@media (max-width: 600px) {
 		.container-tion {
-			align-items: center;
-			display: flex;
-			position: absolute;
+			position: fixed;
 			right: 0;
-			margin: 1px;
+			bottom: 0;
+			background-color: black;
+			width: 100%;
+			z-index: 9999;
+			justify-content: center;
+			align-items: center;
 		}
 		
 		.doc-des {

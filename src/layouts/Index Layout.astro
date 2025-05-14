@@ -77,9 +77,13 @@ const {title} = Astro.props;
         text-align: center;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 600px) {
         main {
             height: 100vh;
+        }
+
+        footer {
+            display: none;
         }
     }
 </style>
