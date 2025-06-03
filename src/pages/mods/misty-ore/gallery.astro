@@ -322,7 +322,7 @@ const Images = [
         {Images.map(map => (
             <div class="container-1" data-image-id={map.id}>
                 <div class="container-img">
-                    <img src={map.image} alt={map.alt} width={map.width} height={map.height} class="img" />
+                    <img src={map.image} alt={map.alt} width={map.width} height={map.height} class="img" loading="lazy"/>
                 </div>
                 <div class="title">
                     <h2>{map.title}</h2>
@@ -354,6 +354,11 @@ const Images = [
 </MOLayout>
 
 <style>
+
+    html {
+        scroll-behavior: smooth;
+    }
+
     * {
         padding: 0;
         margin: 0;
