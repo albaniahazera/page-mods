@@ -2,7 +2,58 @@
 import CTPLayout from "./layouts/CTP Layout.astro";
 import modrinth from "./assets/modrinth.png";
 import curseforge from "./assets/curseforge.png";
+const canCraft = "Can Crafting"
 const title = 'Main';
+const versionCrafting = [
+    {
+        version: [
+            "1.20.1-1.1", "1.17.1-1.1", "1.16.5-1.3.0"
+        ]
+    }
+];
+const listCrafting = [
+    {
+        version_1_20_1_1_1: [
+            "Amethyst cluster", "Barrier", "Bedrock", "Bell", "Blaze spawn egg", "Bone meal", "Cave spider spawn egg", 
+            "Chainmail boots", "Chainmail chestplate", "Chainmail helmet", "Chainmail leggings", "Clay", 
+            "Cobweb", "Creeper spawn egg", "Crimson nylium", "Crying obsidian", "Diamond horse armor", "Elytra", 
+            "Enchanted book Efficiency I - V", "Enchanted book Fortune I - III", "Enchanted book Mending", 
+            "Enchanted book silktouch", "Enchanted book unbreaking I - III", "Enchanted golden apple", "End rod", "Enderman spawn egg", 
+            "Endermite spawn egg", "Ghast spawn egg", "Gilded black stone", "Glowstone dust", "Gold horse armor", 
+            "Green color", "Gunpowder", "Heart of the sea", "Honey bottle", "Iron horse armor", "Light", 
+            "Magma cube spawn egg", "Mycelium", "Nametag", "Obsidian", "Phantom spawn egg", "Podzol", "Saddle",
+            "Shulker spawn egg", "Skeleton spawn egg", "Slime ball","Slime spawn egg", "Soul sand", "Spawner",
+            "Spider spawn egg", "Sponge", "Strider spawn egg", "Totem of undying", "Trident", "Warped nylium", 
+            "Wither rose", "Wither skeleton spawn egg", "Zombie spawn egg"
+        ],
+        version_1_17_1_1_1: [
+            "Bell", "Blaze spawn egg", "Bone meal", "Cave spider spawn egg", "Chainmail boots", 
+            "Chainmail chestplate", "Chainmail helmet", "Chainmail leggings", "Clay", "Cobweb", 
+            "Creeper spawn egg", "Crying obsidian", "Diamond horse armor", "Enchanted book Efficiency I - V",
+            "Enchanted book Fortune I - III", "Enchanted book Mending", "Enchanted book silktouch",
+            "Enchanted book unbreaking I - III", "Elytra", "Enchanted golden apple", "End rod", 
+            "Enderman spawn egg", "Endermite spawn egg", "Ghast spawn egg", "Gilded black stone", 
+            "Glowstone dust", "Gold horse armor", "Green color", "Gunpowder", "Heart of the sea", 
+            "Honey bottle", "Iron horse armor", "Magma cube spawn egg", "Mycelium", "Nametag", "Obsidian", 
+            "Phantom spawn egg", "Saddle", "Shulker spawn egg", "Skeleton spawn egg", "Slime ball", 
+            "Slime spawn egg", "Soul sand", "Spawner", "Spider spawn egg", "Sponge", "Strider spawn egg", 
+            "Totem of undying", "Trident", "Warped nylium", "Wither rose", "Wither skeleton spawn egg", 
+            "Zombie spawn egg"
+        ],
+        version_1_16_5_1_3_0: [
+            "Bell", "Blaze spawn egg", "Bone meal", "Cave spider spawn egg", "Chainmail boots", 
+            "Chainmail chestplate", "Chainmail helmet", "Chainmail leggings", "Clay", "Cobweb", 
+            "Creeper spawn egg", "Diamond horse armor", "Enchanted book Efficiency I - V", "Enchanted book Fortune I - III",
+            "Enchanted book Mending", "Enchanted book silktouch", "Enchanted book unbreaking I - III", "Elytra", 
+            "Enchanted golden apple", "End rod", "Ghast spawn egg", "Gilded black stone", "Gold horse armor",
+            "Green color", "Gunpowder", "Honey bottle", "Iron horse armor", "Magma cube spawn egg", "Nametag", 
+            "Phantom spawn egg", "Saddle", "Skeleton spawn egg", "Soul sand", "Spawner", "Spider spawn egg", 
+            "Sponge", "Totem of undying", "Trident", "Wither rose", "Wither skeleton spawn egg", 
+            "Zombie spawn egg"
+        ]
+    }
+];
+
 
 // if (Astro.request.method === "POST") {
 //     const formData = await Astro.request.formData();
@@ -21,7 +72,6 @@ const title = 'Main';
 // const response = await fetch("http://localhost:4320/api/reaction/datas/data");
 // const reactions = await response.json();
 ---
-
 
 <CTPLayout title={title}>
     <div class="container">
@@ -73,123 +123,53 @@ const title = 'Main';
     </div>  
     <div class="container-h2">
         <h2>
-            Changelog
+            latest version
         </h2>
     </div>
     <div class="container-teks">
         <div class="version-new">
-            <h3>Version: 1.17.1-1.1</h3>
+            <h3>{versionCrafting[0].version[0]}</h3>
         </div>
-        <h4>
-            Can crafting :
-        </h4>
-        <div class="changelog">
+        <h4>{canCraft}</h4>
+        <div class="craft">
             <ul>
-                <li>obsidian</li>
-                <li>mycelium</li>
-                <li>crying obsidian</li>
-                <li>slime ball</li>
-                <li>glowstone dust</li>
-                <li>enderman spawn egg</li>
-                <li>endermite spawn egg</li>
-                <li>shulker spawn egg</li>
-                <li>slime spawn egg</li>
-                <li>strider spawn egg</li>
-                <li>heart of the sea</li>
+                {listCrafting[0].version_1_20_1_1_1.map(item => (
+                    <li>{item}</li>
+                ))}
+            </ul>
+        </div>
+    </div>
+    <div class="container-teks">
+        <div class="version-new">
+            <h3>{versionCrafting[0].version[1]}</h3>
+        </div>
+        <h4>{canCraft}</h4>
+        <div class="craft">
+            <ul>
+                {listCrafting[0].version_1_17_1_1_1.map(item => (
+                    <li>{item}</li>
+                ))}
             </ul>
         </div>
         <h4>
             Bug fixed :
         </h4>
-        <div class="changelog">
+        <div class="craft">
             <ul>
                 <li>the recipe for making chainmail armor does not appear when the player obtains the materials to make it.</li>
             </ul>
         </div>
     </div>
     <div class="container-teks">
-        <div class="version">
-            <h3>Version: 1.17.1-1.0</h3>
-        </div>
-        <h4>
-            Just a first version for Minecraft 1.17.1, no crafting items.
-        </h4>
-        <div class="changelog"></div>
-    </div>
-    <div class="container-teks">
         <div class="version-new">
-            <h3>Version: 1.3.0</h3>
+            <h3>{versionCrafting[0].version[2]}</h3>
         </div>
-        <h4>
-            Can crafting :
-        </h4>
-        <div class="changelog">
+        <h4>{canCraft}</h4>
+        <div class="craft">
             <ul>
-                <li>Chainmail boots</li>
-                <li>Chainmail leggings</li>
-                <li>Chainmail chestplate</li>
-                <li>Chainmail helmet</li>
-                <li>Enchanted book mending</li>
-                <li>Enchanted book silk touch</li>
-                <li>Enchanted book unbreaking I-III</li>
-                <li>Wither rose</li>
-            </ul>
-        </div>
-    </div>
-    <div class="container-teks">
-        <div class="version">
-            <h3>Version: 1.2.1</h3>
-        </div>
-        <h4>
-            Can crafting :
-        </h4>
-        <div class="changelog">
-            <ul>
-                <li>Blaze spawn egg</li>
-                <li>Cave spider spawn egg</li>
-                <li>Ghast spawn egg</li>
-                <li>Magma spawn egg</li>
-                <li>Phantom spawn egg</li>
-                <li>Wither spawn egg</li>
-                <li>Enchanted book fortune I-III</li>
-                <li>Enchanted book efficiency I-V</li>
-            </ul>
-        </div>
-    </div>  
-    <div class="container-teks">
-        <div class="version">
-            <h3>Version: 1.2</h3>
-        </div>
-        <h4>
-            Can crafting :
-        </h4>
-        <div class="changelog">
-            <ul>
-                <li>bell</li>
-                <li>bone</li>
-                <li>clay</li>
-                <li>cobweb</li>
-                <li>creeper spawn egg</li>
-                <li>diamond horse armor</li>
-                <li>elytra</li>
-                <li>enchanted golden apple</li>
-                <li>end rod</li>
-                <li>gilded black stone</li>
-                <li>gold horse armor</li>
-                <li>green dye</li>
-                <li>gunpowder</li>
-                <li>honey bottle</li>
-                <li>iron horse armor</li>
-                <li>name tag</li>
-                <li>saddle</li>
-                <li>skeleton spawn egg</li>
-                <li>soul sand</li>
-                <li>spawner</li>
-                <li>spider spawn egg</li>
-                <li>sponge</li>
-                <li>totem of undying</li>
-                <li>trident</li>
-                <li>zombie spawn egg</li>
+                {listCrafting[0].version_1_16_5_1_3_0.map(item => (
+                    <li>{item}</li>
+                ))}
             </ul>
         </div>
     </div>
@@ -339,13 +319,6 @@ const title = 'Main';
         width: 112px;
     }
 
-    .version {
-        background-color: black;
-        color: white;
-        border: 1px solid rgb(0, 255, 55);
-        width: 112px;
-    }
-
     h3 {
         font-family: 'Times New Roman', Times, serif;
         text-align: center;
@@ -363,7 +336,7 @@ const title = 'Main';
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    .changelog {
+    .craft {
         margin: 0px 30px;
         padding: 2px 0px;
     }
