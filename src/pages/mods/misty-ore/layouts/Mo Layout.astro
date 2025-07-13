@@ -2,6 +2,7 @@
 import icon from '../assets/misty_ore.jpg';
 import NavMO from '../components/NavMO.astro';
 const {title} = Astro.props;
+const titlePath = "/mods/misty-ore"
 ---
 
 <!DOCTYPE html>
@@ -20,7 +21,9 @@ const {title} = Astro.props;
 		<nav>
 			<div class="container">
 				<div class="backnav">
-					<img src={icon.src} alt="Icon Misty Ore" width="70" height="70">
+					<a href={titlePath}>
+						<img src={icon.src} alt="Icon Misty Ore" width="70" height="70">
+					</a>
 					<h1 class="navtitle">Misty ore</h1>
 					<NavMO/>
 				</div>

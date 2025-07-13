@@ -2,6 +2,7 @@
 import icon from '../assets/ctp.png';
 import NavCTP from '../components/NavCTP.astro';
 const {title} = Astro.props;
+const titlePath = "/mods/crafting-table-plus"
 ---
 
 <!DOCTYPE html>
@@ -20,7 +21,9 @@ const {title} = Astro.props;
 		<nav>
 			<div class="container">
 				<div class="backnav">
+					<a href={titlePath}>
 					<img src={icon.src} alt="Icon Crafting Table Plus" width="70" height="70">
+					</a>
 					<h1 class="navtitle">Crafting Table Plus</h1>
 					<NavCTP/>
 				</div>

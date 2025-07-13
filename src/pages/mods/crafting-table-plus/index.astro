@@ -4,6 +4,8 @@ import modrinth from "./assets/modrinth.png";
 import curseforge from "./assets/curseforge.png";
 const canCraft = "Can Crafting"
 const title = 'Main';
+const modrinthUrl = "https://modrinth.com/mod/crafting-table-plus"
+const curseforgeUrl = "https://www.curseforge.com/minecraft/mc-mods/crafting-table-plus"
 const versionCrafting = [
     {
         version: [
@@ -182,7 +184,7 @@ const listCrafting = [
                 <p class="teks-download">Download at Modrinth</p>
                 <div class="download-button">
                     <img src={modrinth.src} alt="Modrinth icon" class="icon-modrinth">
-                    <a href="https://modrinth.com/mod/crafting-table-plus" 
+                    <a href={modrinthUrl} 
                     class="url-modrinth" target="_blank">
                         <button class="modrinth">Modrinth</button>
                     </a>
@@ -192,7 +194,7 @@ const listCrafting = [
                 <p class="teks-download">Download at Curse Forge</p>
                 <div class="download-button">
                     <img src={curseforge.src} alt="Curse Forge Icon" class="icon-curseforge">
-                    <a href="https://www.curseforge.com/minecraft/mc-mods/crafting-table-plus" 
+                    <a href={curseforgeUrl}
                     class="url-curse" target="_blank">
                         <button class="curse">Curse Forge</button>
                     </a>
